@@ -7,5 +7,10 @@
 </head>
 <body>
     <h2>Products Admin page</h2>
+    <ol>
+    <% products.forEach(product => { %>
+        <li><%= product.name %>-<%= product.desc %>-<%= product.price %>-<%= product.imageUrl %></li>
+    <%   }) %>
+    </ol>
 </body>
 </html>
