@@ -2,6 +2,7 @@ import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import session from "express-session";
 import dotenv from "dotenv";
+import cors from "cors";
 import mongoose from "mongoose";
 import dbconnect from "./config/db.js";
 import {productRouter} from "./routes/productRoute.js";
@@ -10,6 +11,8 @@ import { storeRouter } from "./routes/storeRoute.js";
 
 const app = express();
 dotenv.config();// Connect to MongoDB
+
+app.use(cors());
 
 app.use(expressLayouts);
 app.set("view engine", "ejs");
