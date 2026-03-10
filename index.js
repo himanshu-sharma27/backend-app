@@ -14,6 +14,7 @@ dotenv.config();// Connect to MongoDB
 app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("views", "views");
+app.set("layout","layout");// All the layouts will be in the views folder and the default layout will be layout.ejs
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
